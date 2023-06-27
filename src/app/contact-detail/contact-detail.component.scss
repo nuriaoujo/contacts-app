@@ -1,0 +1,46 @@
+.bordeado{
+    margin: 5% auto;
+    padding: 0 auto;
+    width: 25%;
+}
+.separador{
+    border: 1px solid rgb(211, 211, 255);
+    margin-bottom: 5%;
+}
+.datosTitulo{
+    font-size: larger;
+    color: grey;
+    font-weight: lighter;
+    text-align: center;
+}
+.avatar{
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg);
+    background-size: cover;
+}
+.fichaUsuario{
+    margin-left: 5%;
+}
+div {
+    padding: 5px 5px 5px 0;
+  }
+.separadorIcono{
+    margin-left: 5%;
+    clear: left;
+    text-align: right;
+    vertical-align: middle;
+}
+.iconoContacto{
+    display: inline-block;
+    vertical-align:top;
+}
+.seguirBoton{
+    margin-top: 10%;
+    text-align: center;
+}
+.favorite{
+    color: palevioletred;
+}
+
+.mi-barra-personalizada {
+    background-color: palevioletred;
+  }

@@ -1,0 +1,59 @@
+<mat-toolbar color="primary">
+    <a mat-button routerLink="/">Inicio</a>
+    <a mat-button routerLink="/contacts">Contactos</a>
+    <a mat-button routerLink="/new-contact">Nuevo contacto</a>
+</mat-toolbar>
+<mat-card>
+    <mat-card-title class="titulo">Gráficas de contactos</mat-card-title>
+    <div class="container">
+
+        <mat-card-content>
+            <ngx-charts-pie-chart
+                [view]="[400,300]"
+                [results]="emailData"
+                [scheme]="colorScheme" 
+                [legend]="showLegend"
+                [gradient] ="gradient"
+                [labels]="showLabels"
+                [doughnut]="isDoughnut">
+            </ngx-charts-pie-chart>
+        </mat-card-content>
+
+        <mat-card-content>
+            <ngx-charts-pie-chart
+                [view]="[400,300]"
+                [results]="phoneData"
+                [scheme]="colorScheme" 
+                [legend]="showLegend"
+                [gradient] ="gradient"
+                [labels]="showLabels"
+                [doughnut]="isDoughnut">
+            </ngx-charts-pie-chart>
+        </mat-card-content>
+
+        <mat-card-content>
+            <ngx-charts-pie-chart
+                [view]="[400,300]"
+                [results]="nameSData"
+                [scheme]="colorScheme" 
+                [legend]="showLegend"
+                [gradient] ="gradient"
+                [labels]="showLabels"
+                [doughnut]="isDoughnut">
+            </ngx-charts-pie-chart>
+        </mat-card-content>
+
+        <mat-card-content>
+            <ngx-charts-pie-chart
+                [view]="[400,300]"
+                [results]="nameAData"
+                [scheme]="colorScheme" 
+                [legend]="showLegend"
+                [gradient] ="gradient"
+                [labels]="showLabels"
+                [doughnut]="isDoughnut">
+            </ngx-charts-pie-chart>
+        </mat-card-content>
+        
+    </div>
+</mat-card>

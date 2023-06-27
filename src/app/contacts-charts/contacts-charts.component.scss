@@ -1,0 +1,12 @@
+.titulo{
+  font-weight: lighter;
+  margin-bottom: 2%;
+  color: gray;
+}
+.container{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+mat-card-content{
+  margin: 0 auto;
+}

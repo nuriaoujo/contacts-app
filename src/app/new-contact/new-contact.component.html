@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+    <a mat-button routerLink="/">Inicio</a>
+    <a mat-button routerLink="/contacts">Contactos</a>
+    <a mat-button routerLink="/new-contact">Nuevo contacto</a>
+</mat-toolbar>
+<mat-card class="base">
+    <mat-card-title class="title">Nuevo contacto</mat-card-title>
+    <hr>
+    <mat-card-content>
+        <form (submit)="addContact()">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" name="name" required [(ngModel)]="nombre">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Primer apellido</mat-label>
+                <input matInput type="text" name="surname" required [(ngModel)]="apellido1">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Segundo apellido</mat-label>
+                <input matInput type="text" name="lastName" required [(ngModel)]="apellido2">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Teléfono</mat-label>
+                <input matInput type="text" name="telephone" required [(ngModel)]="telefono">
+                <mat-icon matSuffix color="primary">smartphone</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" name="email" required [(ngModel)]="correo">
+                <mat-icon matSuffix color="primary">mail</mat-icon>
+            </mat-form-field>
+
+            <div class="boton"><button mat-stroked-button color="primary" type="submit">GUARDAR</button></div>
+
+        </form>
+    </mat-card-content>
+</mat-card> 

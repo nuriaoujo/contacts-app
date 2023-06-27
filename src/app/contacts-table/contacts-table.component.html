@@ -1,0 +1,64 @@
+<mat-toolbar color="primary">
+  <a mat-button routerLink="/">Inicio</a>
+  <a mat-button routerLink="/contacts">Contactos</a>
+  <a mat-button routerLink="/new-contact">Nuevo contacto</a>
+</mat-toolbar>
+<a mat-stroked-button class="boton" routerLink="/new-contact">Nuevo contacto</a>
+<table mat-table [dataSource]="contacts" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  <!--Si no pones las dos llaves {{}} lo cuenta como un string-->
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let contact"> {{contact.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let contact"> {{contact.name}} </td>
+    </ng-container>
+  
+    <!-- Surname Column -->
+    <ng-container matColumnDef="surname">
+      <th mat-header-cell *matHeaderCellDef> Apellido 1 </th>
+      <td mat-cell *matCellDef="let contact"> {{contact.surname}} </td>
+    </ng-container>
+  
+    <!-- Lastname Column -->
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef> Apellido 2 </th>
+      <td mat-cell *matCellDef="let contact"> {{contact.lastName}} </td>
+    </ng-container>
+
+    <!-- Telephone Column -->
+    <ng-container matColumnDef="telephone">
+        <th mat-header-cell *matHeaderCellDef> Teléfono 2 </th>
+        <td mat-cell *matCellDef="let contact"> {{contact.telephone}} </td>
+      </ng-container>
+
+    <!-- Email Column -->
+    <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email 2 </th>
+    <td mat-cell *matCellDef="let contact"> {{contact.email}} </td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let contact">
+        <button mat-icon-button color="primary" (click)="viewContactDetail(contact)">
+        <mat-icon>visibility</mat-icon>
+      </button>
+      <button mat-icon-button class="botonCora" (click)="openConfirmationDialog(contact.id)">
+        <mat-icon>heart_broken</mat-icon>
+      </button>
+    </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="['name', 'surname', 'lastName', 'telephone', 'email', 'actions']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name', 'surname', 'lastName', 'telephone', 'email', 'actions'];"></tr>
+  </table>

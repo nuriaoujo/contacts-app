@@ -1,0 +1,23 @@
+.base{
+    margin: 5% auto;
+    padding: 0 auto;
+    width: 25%;  
+}
+.title{
+    text-align: center;
+    font-weight: lighter;
+    color: gray;
+    margin-bottom: 7%;
+}
+.boton{
+    margin-top: 5%;
+    text-align: center;
+}
+hr{
+    border: 1px solid rgb(211, 211, 255);
+    margin-bottom: 5%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+    <a mat-button routerLink="/">Inicio</a>
+    <a mat-button routerLink="/contacts">Contactos</a>
+    <a mat-button routerLink="/new-contact">Nuevo contacto</a>
+</mat-toolbar>
+<mat-card class="bordeado">
+    <mat-card-header class="cabecera">
+        <div mat-card-avatar class="avatar"></div>
+        <mat-card-title>{{contact.name}}</mat-card-title>
+        <mat-card-subtitle>{{contact.surname}} {{contact.lastName}}</mat-card-subtitle>
+    </mat-card-header>
+    <hr class="separador">
+    <mat-card-content class="fichaUsuario">
+        <p class="datosTitulo">DATOS DEL USUARIO</p>
+        <div>
+            <mat-icon class="iconoContacto" color="primary">person</mat-icon>
+            <span class="separadorIcono">{{contact.name}} {{contact.surname}} {{contact.lastName}}</span>
+        </div>
+        <div>
+            <mat-icon class="iconoContacto" color="primary">smartphone</mat-icon>
+            <span class="separadorIcono">{{contact.telephone}}</span>
+        </div>
+        <div>
+            <mat-icon class="iconoContacto" color="primary">mail</mat-icon>
+            <span class="separadorIcono">{{contact.email}}</span>
+        </div>
+            <mat-card-actions class="seguirBoton">
+            <button mat-stroked-button color="primary" (click)="goToUpdateContact()">ACTUALIZAR</button>
+            <button mat-stroked-button color="primary" (click)="deleteContact()">ELIMINAR</button>
+            <button mat-icon-button class="favorite">
+                <mat-icon>favorite</mat-icon>
+              </button>
+          </mat-card-actions>
+    </mat-card-content>
+    <mat-card-footer>
+        <mat-progress-bar mode="indeterminate" class="mi-barra-personalizada"></mat-progress-bar>
+      </mat-card-footer>
+  </mat-card>
+
+
